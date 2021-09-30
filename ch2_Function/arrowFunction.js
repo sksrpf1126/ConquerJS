@@ -39,6 +39,7 @@ arrFunc1.speak() //화살표 함수의 this는 언제나 상위 스코프의 thi
 //생성자 함수로 사용할 경우
 function func2() {
   this.num = 1111
+  console.log('생성자 함수 this', this)
 }
 
 //화살표 함수의 경우 익명함수로 선언해야 한다
@@ -60,8 +61,21 @@ h1Title.addEventListener('click', function () {
 })
 
 //화살표 함수의 this는 상위 스코프의 this를 가르키기 때문에 상위 스코프가 없는 경우 전역객체인 window 객체를 가르킴
-h1Title.addEventListener('mouseover', () => {
-  console.log(this) //window object
-})
+// h1Title.addEventListener('mouseover', () => {
+//   console.log(this) //window object
+// })
 
 //프로토타입 공부 이후 추가할 내용
+
+console.log('===================prototype====================')
+
+//object(객체) 생성
+const person = {
+  name: 'Lee',
+}
+
+//Object타입의 프로토타입에 sayHi라는 전역 화살표 함수 추가
+Object.prototype.sayHi = () => console.log(`Hi ${this.name}`)
+
+person.sayHi() // Hi undefined  결론은 prototype에 함수를 추가할 때 또한 화살표 함수를 사용하면 안된다.
+console.log('===============================================')
