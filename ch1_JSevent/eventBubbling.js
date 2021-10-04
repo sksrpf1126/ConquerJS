@@ -6,20 +6,21 @@ const divs = document.querySelectorAll('div')
 
 const logEvent = (e) => {
   console.log(e.currentTarget.className)
+  //e.stopPropagation() //원하는 화면요소 이벤트만 신경쓰고 싶을 때 (버블링 X 캡쳐링 X)
 }
 
 const logEvent2 = (e) => {
   console.log(e.currentTarget.className)
 }
 
-const divOne = document.querySelector('.one')
-divOne.addEventListener('click', logEvent)
+// const divOne = document.querySelector('.one')
+// divOne.addEventListener('click', logEvent)
 
 // one, two, three 3개의 div 모두 같은 이벤트를 할당 받았을 경우
 // three의 같은 형제 four 추가 -> 같은 형제끼리는 이벤트 버블링 X 부모 자식 간에만 동작
-// divs.forEach((div) => {
-//   div.addEventListener('click', logEvent)
-// })
+divs.forEach((div) => {
+  div.addEventListener('click', logEvent)
+})
 
 // 이벤트 동작 이후 콜백함수 반환은 이벤트 버블링에 영향이 없다. 그대로 버블링 동작
 // 단, 같은 이벤트(click, mouseover 등)일 경우에만 이벤트 버블링이 이루어짐

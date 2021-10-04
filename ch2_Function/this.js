@@ -34,7 +34,7 @@ Person.prototype.sayHi = function () {
 const lim = new Person('lim', 24)
 lim.sayHi() //new 키워드를 통해 만들어진 객체의 this는 인스턴스(lim 자신)이 됨
 console.dir(Person)
-const seo = Person('seo', 24) // window 객체에 name, age가 들어가버리게 됨
+const seo = Person('seo', 24) // new 키워드가 없다면 window 객체에 name, age가 들어가버리게 됨
 //seo.sayHi() new 키워드를 안쓰면 Person에서는 window가 찍히고, 프로트타입에는 접근이 불가하다.
 
 const h1Title = document.querySelector('.h1_title')

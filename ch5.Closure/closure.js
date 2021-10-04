@@ -1,6 +1,6 @@
 // 클러저를 완벽히 이해하기 위해서는 실행 컨텍스트에 대한 이해가 필요
 // 실행 컨텍스트를 이해하면 호이스팅, 스코프, 클로저에 대한 이해를 할 수 있음.
-// 출처 : https://poiemaweb.com/js-execution-context   ==> 실행 컨텍스트(best)
+// 출처 : https://poiemaweb.com/js-execution-context   ==> 실행 컨텍스트(best) 블록 레벨 스코프의 추가로 바뀐 부분이 약간 있음
 // 출처 : https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0 ==> 실행 컨텍스트 및 클로저
 // 출처 : https://poiemaweb.com/js-closure ==> 클로저
 
