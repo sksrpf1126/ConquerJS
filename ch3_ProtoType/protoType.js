@@ -84,3 +84,18 @@ console.log(lim.__proto__.constructor === Person)
  * 클래스 하면 떠오르는 것이 상속이다. 위의 복잡한 관계를 이용하여 프로트타입 체인이라는 기법을 통해서 상속을 구현(흉내)할 수 있다.
  * 이미 string, Array, function 등 모든 js 객체는 프로토타입 체인을 통해 이루어져 있으며, 모든 객체는 결국 Object의 자식이 되는 것이다.
  */
+
+//위 생성자 함수를 class 문법으로 변환
+// 여기서 hello() 는 PersonClass.prototype에 저장된다.
+class PersonClass {
+  constructor(name, gender) {
+    this.name = name
+    this.gender = gender
+  }
+  hello() {
+    console.log(this.name, '님 안녕하세요')
+  }
+}
+
+const kim = new PersonClass('kim', '남')
+kim.hello() //kim 님 안녕하세요
