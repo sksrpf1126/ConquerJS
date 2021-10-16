@@ -69,7 +69,7 @@ const lim = new Person('임성현', '남')
 console.log(lim)
 //__proto__는 [[Prototype]]링크이다 테스트
 console.log(lim.prototype) // undefined lim은 객체이므로 prototype이 아닌  [[prototype]] 즉 __proto__로 접근해야 한다.
-console.log(lim.__proto__)
+console.log('객체 __proto__', lim.__proto__)
 
 //결국 생성자 함수의 프로토타입의 생성자는 자기 자신을 가르키게 되는 것이므로 ture
 console.log(Person.prototype.constructor === Person)
